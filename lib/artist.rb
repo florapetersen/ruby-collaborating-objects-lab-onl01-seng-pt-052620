@@ -5,7 +5,6 @@ class Artist
 
   def initialize(name) #initializes new instance of Artist class
     @name = name #sets name of artist to instance variable
-    save #calls save method
   end
 
   def self.all #method operates on Artist class
@@ -33,6 +32,7 @@ class Artist
 
   def self.create(name) #to create instance of artist if it doesn't exist
     artist = Artist.new(name) #initializes new instance of artist
+    artist.save
     artist #returns the new artist object
   end
 
